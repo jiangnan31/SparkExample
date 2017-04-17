@@ -1,4 +1,4 @@
-package org.training.examples;
+package org.sparkml.java.chapter2;
 
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -22,7 +22,7 @@ public class ProductStatisticsJava {
 
         JavaSparkContext sc = new JavaSparkContext("local[2]", "First Spark App");
 
-        JavaRDD<String[]> data = sc.textFile("/Users/jiangnan/Work/github/simplespark/src/main/resource/products.csv")
+        JavaRDD<String[]> data = sc.textFile("/Users/jiangnan/Work/github/simplespark/src/main/resources/chapter2/products.csv")
                 .map(new Function<String, String[]>() {
 
                     public String[] call(String s) throws Exception {

@@ -1,4 +1,4 @@
-package org.sparkml.java.chapter2;
+package org.training.examples;
 
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;

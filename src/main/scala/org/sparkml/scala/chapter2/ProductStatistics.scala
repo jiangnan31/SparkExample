@@ -10,7 +10,7 @@ object ProductStatistics {
   def main(args: Array[String]) {
     val sc = new SparkContext("local[2]", "First Spark App")
     // CSV格式数据转化为(user, product, price)格式的记录集
-    val data = sc.textFile("/Users/jiangnan/Work/github/simplespark/src/main/resource/products.csv")
+    val data = sc.textFile("/Users/jiangnan/Work/github/simplespark/src/main/resources/chapter2/products.csv")
       .map(line => line.split(","))
       .map(purchaseRecord => (purchaseRecord(0), purchaseRecord(1), purchaseRecord(2)))
 

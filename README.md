@@ -1,7 +1,7 @@
-# simplespark
-A simple spark example
+# SparkExamples
+base on [XichengDong simplespark](https://github.com/XichengDong/simplespark)
 
-#generate idea project
-mvn idea:idea
+try import more examples for [Machine Learning with Spark](https://book.douban.com/subject/26593179/)
 
-mvn exec:java -Dexec.mainClass="WordCountJava"
+## Chapter2
+
