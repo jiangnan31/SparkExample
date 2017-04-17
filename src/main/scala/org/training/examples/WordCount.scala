@@ -5,8 +5,8 @@ import org.apache.spark._
 object WordCount {
   def main(args: Array[String]) {
     var masterUrl = "local[1]"
-    var inputPath = "/Users/xicheng.dong/training-examples/ml-1m/README"
-    var outputPath = "/tmp/output"
+    var inputPath = "/Users/jiangnan/Work/utils/spark-hadoop/README.md"
+    var outputPath = "/Users/jiangnan/Downloads/tempFile/output_scala"
 
     if (args.length == 1) {
       masterUrl = args(0)
@@ -22,7 +22,7 @@ object WordCount {
     val sc = new SparkContext(sparkConf)
 
     val rowRdd = sc.textFile(inputPath)
-    val resultRdd = rowRdd.flatMap(line => line.split("\\s+"))
+    val resultRdd = rowRdd.flatMap(line => line.split("\\s+")).filter( word => word.length > 1)
         .map(word => (word, 1)).reduceByKey(_ + _)
 
     resultRdd.saveAsTextFile(outputPath)

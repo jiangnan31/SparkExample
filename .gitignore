@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+CATALINA_APPLOG_IS_UNDEFINED/*
+.settings/*
+.classpath
+.project
+.DS_Store
+logs
+Makefile
+*.data
+*.iml
+discoverclient/*
+.idea/
+target/
